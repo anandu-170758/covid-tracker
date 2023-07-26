@@ -1,6 +1,6 @@
 export const sortData=(data)=>{
     const sortedData=[...data];
-    sortData.sort((a,b)=>{
+    sortedData.sort((a,b)=>{
         if(a.cases>b.cases){
             return -1;
         }
