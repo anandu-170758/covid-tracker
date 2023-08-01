@@ -1,7 +1,7 @@
-import React from 'react'
-import {Map as LeafletMap,TileLayer} from "react-leaflet";
-import "./map.css"
-function map() {
+import React from "react";
+import { Map as LeafletMap, TileLayer } from "react-leaflet";
+import "./Map.css";
+function map({center,zoom}) {
   return (
     <div className="Map">
       <LeafletMap>
