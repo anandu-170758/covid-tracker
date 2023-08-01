@@ -11,7 +11,7 @@ import InfoBox from "./InfoBox";
 import Map from "./map";
 import Table from "./table";
 import { sortData } from "./util";
-import Linegraph from"./linegraph"
+import Linegraph from "./linegraph";
 function App() {
   const [Countries, setCountries] = useState([]);
   const [country, setCountry] = useState("worldwide");
@@ -22,7 +22,7 @@ function App() {
       .then((response) => {
         console.log(response);
         return response.json();
-      }) 
+      })
       .then((data) => {
         setCountryInfo(data);
       });
@@ -38,10 +38,12 @@ function App() {
         .then((countryResponse) => {
           const sortedData = sortData(countryResponse);
           setTableData(sortedData);
-          setCountries(countryResponse.map((country) => ({
-            name: country.country,
-            value: country.countryInfo.iso2,
-          })));
+          setCountries(
+            countryResponse.map((country) => ({
+              name: country.country,
+              value: country.countryInfo.iso2,
+            }))
+          );
         });
     };
     getCountriesData();
@@ -103,17 +105,17 @@ function App() {
         <Map />
       </div>
       <div>
-        <Card className="app_right">
+        <Card className="app_right" >
           <CardContent>
             <h3> Live Cases by Country</h3>
-            <Table countries={tableData} />  
+            <Table countries={tableData} />
             <h3>WorldWide new cases</h3>
-            <Linegraph/>
+            <Linegraph />
           </CardContent>
         </Card>
       </div>
     </div>
-  );  
+  );
 }
 
 export default App;
