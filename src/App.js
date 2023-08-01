@@ -102,7 +102,7 @@ function App() {
             total={countryInfo.todayDeaths}
           />
         </div>
-        <Map />
+        <Map/>
       </div>
       <div>
         <Card className="app_right" >
@@ -110,7 +110,7 @@ function App() {
             <h3> Live Cases by Country</h3>
             <Table countries={tableData} />
             <h3>WorldWide new cases</h3>
-            <Linegraph />
+            <Linegraph/>
           </CardContent>
         </Card>
       </div>
