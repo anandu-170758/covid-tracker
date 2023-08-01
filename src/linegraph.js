@@ -62,7 +62,7 @@ const buildChartData = (data, casesType = "cases") => {
   return chartData;
 };
 
-function Linegraph() {
+function Linegraph({casesType="cases"}) {
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -76,11 +76,11 @@ function Linegraph() {
         });
     };
     fetchData();
-  }, []);
+  }, [casesType]);
 
   return (
     <div style={{maxHeight:"300px"}}>
-      <h1>I'm a graph</h1>
+      
       {console.log(data)}
       {data?.length > 0 && (
         <Line
