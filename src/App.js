@@ -60,8 +60,8 @@ function App() {
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
 
-    /*console.log("hello", countryCode);
-    setInputCountry(countryCode);*/
+    /*console.log("hello", countryCode);*/
+    setInputCountry(countryCode);
 
     const url =
       countryCode === "worldwide"
