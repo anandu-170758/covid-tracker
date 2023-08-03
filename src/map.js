@@ -25,7 +25,7 @@ function Map({ countries, casesType, center, zoom }) {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         {/*loop through countries and draw circles*/}
-        {showDataOnMap(countries,casesType)}
+        {showDataOnMap(countries,casesType )}
       </LeafletMap>
     </div>
   );

@@ -37,6 +37,10 @@ export const sortData = (data) => {
     });
     return sortedData;
   };
+  
+  export const prettyPrintStat = (stat) =>
+  stat ? `+${numeral(stat).format("0.0a")}` : "+0";
+
  //Draw circles on the map with interactive toopltop
   export const showDataOnMap=(data,casesType='cases')=>(
     data.map(country=>(
@@ -75,5 +79,3 @@ export const sortData = (data) => {
     ))
   )
   
-  export const prettyPrintStat = (stat) =>
-    stat ? `+${numeral(stat).format("0.0a")}` : "+0";
