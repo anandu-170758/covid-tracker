@@ -1,6 +1,9 @@
 import React from "react";
 import numeral from "numeral";
-import{Circle,Popup} from "react-leaflet";
+//import { Circle } from "leaflet";//
+import { Circle, Popup } from "react-leaflet";
+//import { Circle,Popup } from "leaflet";//
+//import{Circle,Popup} from "react-leaflet";//
 
 //-----colours for Popup-----//
 const casesTypeColors = {

@@ -3,19 +3,6 @@ import './map.css';
 import {  MapContainer as LeafletMap , TileLayer, Marker, Popup } from 'react-leaflet';
 import { showDataOnMap } from "./util";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Map({ countries, casesType, center, zoom }) {
   return (
     <div className="map">

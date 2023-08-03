@@ -62,7 +62,7 @@ const buildChartData = (data, casesType = "cases") => {
   return chartData;
 };
 
-function Linegraph({casesType="cases"}) {
+function Linegraph({casesType="cases",...props}) {
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -79,7 +79,7 @@ function Linegraph({casesType="cases"}) {
   }, [casesType]);
 
   return (
-    <div style={{maxHeight:"300px"}}>
+    <div className={props.className}>
       
       {console.log(data)}
       {data?.length > 0 && (
