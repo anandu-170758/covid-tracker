@@ -64,15 +64,15 @@ const buildChartData = (data, casesType = "cases") => {
 
 function Linegraph({casesType="cases",...props}) {
   const [data, setData] = useState({});
-
   useEffect(() => {
     const fetchData = async () => {
-      await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
+      await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=all")
         .then((response) => response.json())
         .then((data) => {
-          let chartData = buildChartData(data, "cases");
-          setData(chartData);
-          console.log(chartData);
+          let chartData = buildChartData(data,casesType);
+          let filteredData=chartData.filter(obj=>obj.y>0)
+          setData(filteredData);
+          console.log(JSON.stringify(chartData));
         });
     };
     fetchData();
