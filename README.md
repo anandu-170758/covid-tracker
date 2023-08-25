@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+#Developed a Real-Time COVID-19 Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+In this project, I created a dynamic and interactive COVID-19 Tracker using ReactJS, HTML5, and CSS3. By integrating a live API, the application delivers up-to-the-minute updates on active and recovered cases. To ensure a smooth user experience, I implemented robust error handling and optimized data retrieval. Users can explore COVID-19 statistics by country, aided by insightful line graphs and an interactive map component. The project's responsive design guarantees seamless access across devices. Through the synergy of technical skills and data visualization, the Real-Time COVID-19 Tracker offers both valuable insights and an engaging interface, contributing to the global understanding of the pandemic.
 
 In the project directory, you can run:
 
